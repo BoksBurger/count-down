@@ -1,6 +1,7 @@
 # count-down
 
 This is a fun project I made to get myself acquainted with Vue JS.
+Choose a date of your own or click one of the predefined options to start counting down.
 
 ## Recommended IDE Setup
 
