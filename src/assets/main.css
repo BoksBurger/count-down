@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Open+Sans&display=swap");
+
+body,
+html,
+* {
+  margin: 0;
+}
+
+#app {
+  max-width: 1280px;
+  height: 100vh;
+  margin: 0 auto;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-family: "Lato", sans-serif;
+}
+
+#countDownContainer {
+  display: flex;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+  padding: 16px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input {
+  font-size: 2rem;
+  margin: 8px;
+}
+
+button {
+  font-size: 1.5rem;
+  background-color: black;
+  color: azure;
+  text-transform: uppercase;
+  border-radius: 8px;
+  padding: 8px 32px;
+  border: 0;
+}
+
+button:hover {
+  box-shadow: 1px 2px 8px black;
+  transform: translateX(-1px) translateY(-1px);
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: unset;
+  transform: unset;
+  cursor: pointer;
+}
+
+.countDownElement {
+  display: block;
+  margin: 8px;
+  text-align: center;
+}
+
+.countDownElement span {
+  display: block;
+  text-align: center;
+}
+
+.countDownElement span:first-child {
+  background-color: black;
+  color: azure;
+  font-size: 2rem;
+  padding: 8px;
+}
+
+.countDownElement span:last-child {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.scale-in-ver-center {
+  animation: scale-in-ver-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes scale-in-ver-center {
+  0% {
+    transform: scaleY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.scale-out-vertical {
+  animation: scale-out-vertical 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+@keyframes scale-out-vertical {
+  0% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 1;
+  }
+}

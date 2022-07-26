@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Final Count Down</title>
+</head>
+<script src="https://unpkg.com/vue@next"></script>
+
+<body>
+  <div id="app">
+    <h1>{{appGreeting}}</h1>
+    <div id="countDownContainer" class="scale-in-ver-center" v-show="showCountDown">
+      <div class="countDownElement">
+        <span>{{days}}</span>
+        <span>Days</span>
+      </div>
+      <div class="countDownElement">
+        <span>{{hours}}</span>
+        <span>Hours</span>
+      </div>
+      <div class="countDownElement">
+        <span>{{minutes}}</span>
+        <span>Minutes</span>
+      </div>
+      <div class="countDownElement">
+        <span>{{seconds}}</span>
+        <span>Seconds</span>
+      </div>
+    </div>
+    <input v-show="!showCountDown" @change="CountDown" id="dateInput" type="date" placeholder="Enter a date">
+    <button v-show="showCountDown" @click="Stop">Stop</button>
+    <div v-show="!showCountDown"><a href="#" @click="EventCountDown('Counting down to Christmas','2022-12-25')">Xmas
+        2022</a> | <a href="#" @click="EventCountDown('Counting down to New Year','2023-01-01')">New Year</a> | <a
+        href="#" @click="EventCountDown('Counting down to Pi Day 2023','2023-03-14')">Pi
+        Day 2023</a> | <a href="#" @click="EventCountDown('Counting down to Star Wars day','2023-05-04')">May the fourth</a> | <a href="#" @click="EventCountDown('Counting down to your 88th b\'day','2066-09-24')"
+        title="I was born on this day, 1978. It was a Sunday.">24 September 2066</a></div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
